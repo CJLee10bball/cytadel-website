@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Physicians – CYTADEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            background-image: linear-gradient(rgba(249, 249, 249, 0.85), rgba(249, 249, 249, 0.85)),
+                url('white-mountain.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            color: #e07c00;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .physicians-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .physicians-section h1 {
+            color: #f7941d;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .physicians-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            margin-top: 2rem;
+            background-color: #f7941d;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e07c00;
+        }
+
+        .form-button {
+            background-color: #f7941d;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            display: block;
+            margin: 2rem auto 0;
+            /* centers the button */
+        }
+
+        .form-button:hover {
+            transform: translateY(-3px);
+            background-color: #e07c00;
+        }
+
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 1rem;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .form-container h1 {
+            color: #f7941d;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-container p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 1.5rem;
+        }
+
+        .tally-embed-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="about-cytadel.html">About CYTADEL</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="form-wrapper">
+        <div class="form-container">
+            <h1>For Physicians</h1>
+            <p>If you're interested in building the future of medicine with CYTADEL, we'd love to hear from you.</p>
+
+            <div class="tally-embed-wrapper">
+                <iframe
+                    data-tally-src="https://tally.so/embed/worlO5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" frameborder="0" marginheight="0" marginwidth="0"
+                    title="For Physicians"></iframe>
+            </div>
+
+            <p class="privacy-note">We respect your privacy. Your information will only be used to contact you about
+                CYTADEL opportunities.</p>
+        </div>
+    </section>
+
+    <script>
+        var d = document,
+            w = "https://tally.so/widgets/embed.js",
+            v = function () {
+                if (typeof Tally !== "undefined") {
+                    Tally.loadEmbeds();
+                } else {
+                    d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) {
+                        e.src = e.dataset.tallySrc;
+                    });
+                }
+            };
+        if (typeof Tally !== "undefined") v();
+        else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            s.src = w;
+            s.onload = v;
+            s.onerror = v;
+            d.body.appendChild(s);
+        }
+    </script>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+</body>
+
+</html>

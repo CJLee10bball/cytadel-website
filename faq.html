@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | CYTADEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            color: #e07c00;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-container h1 {
+            text-align: center;
+            color: #f7941d;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        details {
+            margin-bottom: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #fcfcfc;
+            cursor: pointer;
+        }
+
+        summary {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f7941d;
+            outline: none;
+        }
+
+        details[open] summary::after {
+            content: "▲";
+            float: right;
+        }
+
+        summary::after {
+            content: "▼";
+            float: right;
+        }
+
+        details p {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .background-wrapper {
+            position: fixed;
+            inset: 0;
+            background: url('white-mountain.png') no-repeat center top;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.25;
+            /* adjust this for more or less fade */
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper"></div>
+    <nav>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="about-cytadel.html">About CYTADEL</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <details>
+            <summary>Do you accept insurance?</summary>
+            <p>No. CYTADEL is a direct care model that removes insurance middlemen so care can be simpler, more
+                transparent, and personalized.</p>
+        </details>
+
+        <details>
+            <summary>What does the membership include?</summary>
+            <p>Membership includes direct access to your physician, same- or next-day appointments, extended visit
+                times, and discounted rates on additional services.</p>
+        </details>
+
+        <details>
+            <summary>What if I need labs, imaging, or referrals?</summary>
+            <p>We offer wholesale pricing on labs and medications and coordinate affordable imaging and referrals with
+                local partners. Pricing is always transparent.</p>
+        </details>
+
+        <details>
+            <summary>Can I use my HSA or FSA to pay for CYTADEL?</summary>
+            <p>Usually. Most Health Savings Accounts (HSAs) and Flexible Spending Accounts (FSAs) can be used to pay for
+                CYTADEL services. Starting in 2026, HSA funds can be used to pay for services in Texas.</p>
+        </details>
+
+        <details>
+            <summary>Can I cancel my membership?</summary>
+            <p>Yes. Our membership is month-to-month with no lock-in contracts. Cancel anytime with no penalties.</p>
+        </details>
+
+        <details>
+            <summary>What if I already have insurance?</summary>
+            <p>You can still use your insurance for things like catastrophic care, hospitalization, or specialist
+                visits. CYTADEL covers the day-to-day care insurance wasn’t designed for.</p>
+        </details>
+
+        <details>
+            <summary>What kinds of conditions do you manage?</summary>
+            <p>We manage everything from chronic conditions like high blood pressure and diabetes to urgent concerns,
+                preventive care, and performance medicine in adults and children.</p>
+        </details>
+
+        <details>
+            <summary>Do you offer virtual visits?</summary>
+            <p>Yes. Virtual care is included as part of your membership, along with messaging access and quick follow-up
+                when needed.</p>
+        </details>
+        <details>
+            <summary>How is this different from concierge medicine?</summary>
+            <p>Concierge practices typically bill insurance on top of a large membership fee. CYTADEL is simpler, more
+                transparent, and designed to be accessible, not elite.</p>
+        </details>
+
+        <details>
+            <summary>Why don’t you participate in the insurance system at all?</summary>
+            <p>Because we believe health decisions should be made between doctor and patient, not dictated by billing
+                codes or corporate policies. Insurance has distorted the purpose of primary care and introduced
+                unnecessary complexity, cost, and delay.</p>
+        </details>
+
+        <details>
+            <summary>Why is there a monthly fee and a charge for each visit?</summary>
+            <p>CYTADEL’s goal is to make personalized, physician-led care accessible to everyone.
+                Traditional Direct Primary Care (DPC) practices usually include unlimited visits in a higher monthly
+                fee. At CYTADEL, we keep your membership cost low to maintain ongoing access to your physician and our
+                system, while visit fees are charged only when you’re seen.
+                For most people, this structure is much for cost-effective. You’d typically need to see your DPC doctor
+                seven or more times in a year for a traditional flat-fee model to be more cost-effective than CYTADEL’s
+                pay-for-what-you-use approach. </p>
+        </details>
+        <details>
+            <summary>What does it mean that CYTADEL is modeled after Singapore's healthcare system?</summary>
+            <p>Singapore’s healthcare system is known for its high quality, low cost, and efficient use of public and
+                private resources. CYTADEL draws inspiration from that model by combining personal responsibility with
+                clear, upfront pricing. The small monthly subscription fee is similar in concept to how Singaporeans
+                contribute a portion of their income toward medical savings accounts through taxation. Most healthcare
+                spending in Singapore is paid directly by patients at the point of care, not funneled through complex
+                insurance systems, which keeps prices transparent and market-driven. Like Singapore’s system, CYTADEL
+                emphasizes preventive care, financial transparency, and a strong doctor-patient relationship while
+                avoiding the bureaucracy that drives up costs in traditional insurance-based care.
+            </p>
+        </details>
+        <details>
+            <summary>Is CYTADEL aligned with functional or holistic medicine?</summary>
+            <p>CYTADEL shares many values with those approaches: whole-person care, root-cause analysis, and
+                prevention-first thinking. But we combine that with rigorous science, clear communication, and a deep
+                respect for the patient-doctor relationship.</p>
+        </details>
+
+        <details>
+            <summary>Do you treat patients who just want conventional care?</summary>
+            <p>Absolutely. You don’t need to follow a specific lifestyle or philosophy to be cared for at CYTADEL.
+                Whether you want to optimize longevity, manage a chronic condition, or just have a doctor who listens,
+                you’re welcome here.</p>
+        </details>
+        <details>
+            <summary>Do you accept Bitcoin?</summary>
+            <p>Yes. We accept Bitcoin as a form of payment for membership and services. In fact, we offer a 10% discount
+                when your annual membership is paid in full with bitcoin.
+                We believe Bitcoin preserves the value of your time and maintaining your health is the best way to fully
+                take
+                advantage of that time. Both are long-term investments in personal freedom, independence, and
+                resilience.</p>
+        </details>
+
+
+
+    </div>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+</body>
+
+</html>

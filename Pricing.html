@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | CYTADEL Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #f7941d;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            margin-top: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .pricing-table th {
+            background-color: #f7941d;
+            color: white;
+            padding: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-table td {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+
+            .pricing-table,
+            .pricing-table tr,
+            .pricing-table td,
+            .pricing-table th {
+                display: block;
+                width: 100%;
+            }
+
+            .pricing-table tr {
+                margin-bottom: 1rem;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+
+            .pricing-table td {
+                text-align: left;
+                border-bottom: none;
+            }
+
+            .pricing-table td:last-child {
+                text-align: right;
+            }
+        }
+
+        .get-started-button {
+            display: inline-block;
+            background-color: #f7941d;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            margin-top: 2rem;
+        }
+
+        .get-started-button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-logo {
+            height: 40px;
+            /* Adjust as needed */
+            width: auto;
+            /* Keeps the aspect ratio */
+            margin-right: 1rem;
+            /* Adds space between icon and tabs */
+            vertical-align: middle;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-2px);
+            color: #e36d00;
+        }
+
+        .background-wrapper {
+            position: fixed;
+            inset: 0;
+            background: url('white-mountain.png') no-repeat center top;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.25;
+            /* adjust this for more or less fade */
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper"></div>
+    <div class="nav-sticky-wrapper">
+        <nav>
+            <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+            <a href="about-cytadel.html">About CYTADEL</a>
+            <a href="philosophy.html">Philosophy</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Pricing is Simple and Straightforward</h1>
+        <p>
+            Our pricing is simple by design. Membership provides direct access to your doctor without the complexity of
+            insurance, while each visit is billed at a clear, flat rate based on your time with the physician.
+            (Don't worry, your time won't be wasted in waiting rooms.) This
+            keeps costs fair
+            for
+            patients who
+            only need occasional care, while still predictable for those who require more frequent visits. With no
+            hidden
+            fees, surprise bills, or third-party interference, you’ll always know exactly what you’re paying for,
+            allowing you
+            to
+            focus on your health instead of navigating insurance red tape.
+        </p>
+
+        <table class="pricing-table">
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Monthly Membership</td>
+                <td>$50/month (adult),
+                    $25/month (under 18)</td>
+            </tr>
+            <tr>
+                <td>Annual Health Optimization Review (1 hour, recommended once yearly)</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Follow-Up Visits (30 or 60 min, as needed)</td>
+                <td>$75/$150</td>
+            </tr>
+            <tr>
+                <td>Urgent Visit (max 15 min, 1 acute issue)</td>
+                <td>$40</td>
+            </tr>
+
+        </table>
+        <p style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+            *10% off when paid in <span style="color: #f7941d; font-weight: 600;">BTC.</span>
+            Most in-office procedures are included in your visit fee.
+            Labs and medications provided at wholesale pricing
+        </p>
+
+        <a href="contact.html" class="get-started-button">Get Started</a>
+
+    </div>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+
+</body>
+
+</html>

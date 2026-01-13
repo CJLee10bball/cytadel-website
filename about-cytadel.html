@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CYTADEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            color: #e07c00;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .orange-banner {
+            background: linear-gradient(to bottom, #f9a633, #f7941d);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            box-shadow:
+                inset 0 8px 8px rgba(255, 255, 255, 0.3),
+                inset 0 -8px 8px rgba(255, 255, 255, 0.2),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .orange-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .orange-banner p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefits-section {
+            background-color: rgba(249, 249, 249, 0.4);
+            /* adjust 0.8 for more/less transparency */
+            padding: 4rem 1rem;
+        }
+
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-column {
+            flex: 1 1 400px;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-column:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-column h3 {
+            color: #f7941d;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .benefit-column ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .get-started-button {
+            background-color: #f7941d;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            display: inline-block;
+        }
+
+        .get-started-button:hover {
+            background-color: #e07c00;
+            transform: scale(1.05);
+        }
+
+        .background-wrapper {
+            position: fixed;
+            inset: 0;
+            background: url('white-mountain.png') no-repeat center top;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.25;
+            /* adjust this for more or less fade */
+            pointer-events: none;
+        }
+
+        .bio-section {
+            padding: 4rem 1rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* subtle white overlay for readability */
+            margin: 0 auto;
+        }
+
+        .bio-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .bio-image {
+            flex: 1 1 250px;
+            max-width: 250px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .bio-text {
+            flex: 2 1 400px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .bio-text strong {
+            color: #f7941d;
+        }
+
+        .background-wrapper {
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper"></div>
+
+    <nav>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="about-cytadel.html">About CYTADEL</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header style="text-align: center; padding: 3rem 1rem 1rem 1rem;">
+        <h1 style="font-size: 2.8rem; color: #f7941d; margin-bottom: 1rem;">About Us</h1>
+    </header>
+    <section class="orange-banner">
+
+        <strong style="font-size: 1.25rem;">CYTADEL exists because we believe people deserve better.</strong><br><br>
+
+        Better than 7-minute visits. Better than confusing bills. Better than waiting weeks just to be dismissed in
+        minutes.<br><br>
+
+        The traditional medical system wasn’t built for patients (or physicians). It was built to extract profit from
+        illness. For too many people over
+        the last 20 years, insurance premiums have risen over 250%, deductibles have tripled, and out-of-pocket
+        costs are higher than ever, yet outcomes haven’t improved. Chronic disease is more common, and patients are
+        often treated like a billing code on a schedule, not a human being with a story.<br><br>
+
+        One of the biggest flaws in modern healthcare is the misuse of insurance. It was never intended to manage
+        everyday care; it was meant to protect against major, unexpected costs, similar to how car insurance is used for
+        major accidents, but not for filling up with gas or routine vehicle maintenance. With corporations inserting
+        themselves into
+        routine visits
+        and basic preventive care, the system has grown inefficient, expensive, and slow, creating layers of
+        administration that add cost without adding value.<br><br>
+
+        Insurance companies and hospital networks have wedged themselves between doctors and patients, turning care
+        into coding, trust into transactions, and chronic illness into a business model. Your plan costs more and
+        covers less, not because it has to, but because that's how the system was designed to profit.<br><br>
+
+        The result? Shorter visits. Overburdened doctors. More paperwork. We’re paying more than ever,
+        and getting less of what actually matters: time, trust, and real human care.<br><br>
+
+        <strong>We’re done with that.</strong><br><br>
+
+        CYTADEL is a rejection of that system and a return to what medicine was always meant to be: a trusted
+        relationship between a doctor and a patient, guided data, experience, and mutual respect.<br><br>
+
+        We don’t take insurance because we believe you shouldn’t need permission to care for your health. Instead,
+        we offer a simple monthly membership, transparent visit fees, and direct access to your doctor with same- or
+        next-day appointments. No middlemen. No surprise bills. No waiting months for a rushed appointment.<br><br>
+
+        <strong>You deserve a system built to serve you. We’re building it at CYTADEL.</strong><br><br>
+        Real reform begins at the foundation, and in healthcare, that foundation is primary care. It’s where most
+        medical needs are met and where trust is built. By applying our simple, transparent model here first, we’re
+        creating a stable platform for future expansion into specialty care and, eventually, the entire healthcare
+        system.
+        </p>
+    </section>
+
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefit-column">
+                <h3>Better for Patients</h3>
+                <ul>
+                    <li>You’re not just a chart. Your doctor actually knows you</li>
+                    <li>No apps to fight, no insurance reps to argue with</li>
+                    <li>Health plans built around your lifestyle and values</li>
+                    <li>Time to ask questions and get real answers</li>
+                    <li>A doctor who writes back (not a robot or a portal)</li>
+                    <li>The freedom to focus on long-term health, not short-term fixes</li>
+                </ul>
+            </div>
+            <div class="benefit-column">
+                <h3>Better for Physicians</h3>
+                <ul>
+                    <li>Smaller patient panels = more time per visit</li>
+                    <li>No insurance billing or prior auth headaches</li>
+                    <li>Autonomy to practice real medicine</li>
+                    <li>More meaningful patient relationships</li>
+                    <li>Freedom to focus on prevention and outcomes</li>
+                    <li>Work-life balance with purpose</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section style="text-align: center; padding: 1rem 1rem 0 1rem;">
+        <h2 style="font-size: 2.2rem; color: #f7941d; font-weight: 700;">
+            A system that's better for everyone
+        </h2>
+    </section>
+    <section class="bio-section">
+        <div class="bio-container">
+            <img src="chris-sicily.png" alt="Dr. Christopher Lee" class="bio-image">
+            <div class="bio-text">
+                <p>
+                    <strong>Dr. Christopher Lee</strong> is a physician and healthcare entrepreneur committed to
+                    rebuilding trust in medicine.
+                    After years of working within a system that often sidelines both patients and doctors, he set out to
+                    design something
+                    better: care that is personal, transparent, and focused on results. His passion for reform is shaped
+                    by studying
+                    healthcare models around the world and by a belief
+                    that lasting
+                    health is built through strong relationships, clear goals, and the freedom to pursue what truly
+                    matters to each individual.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin: 4rem 0 2rem 0;">
+        <a href="contact.html" class="get-started-button">Get Started</a>
+    </div>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+</body>
+
+</html>

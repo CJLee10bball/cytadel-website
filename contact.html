@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started | CYTADEL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            background-image: linear-gradient(rgba(249, 249, 249, 0.85), rgba(249, 249, 249, 0.85)),
+                url('white-mountain.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            color: #e07c00;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container h1 {
+            color: #f7941d;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        button {
+            background-color: #f7941d;
+            color: white;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #e07c00;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            background-color: #f7941d;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .button-link:hover {
+            transform: translateY(-3px);
+            background-color: #e07c00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="about-cytadel.html">About CYTADEL</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="form-container">
+        <h1>Get Started</h1>
+        <p>Thanks for your interest in joining CYTADEL! Fill out the form below to join the waitlist and tell us a
+            little about yourself.</p>
+        <!-- Tally Embed -->
+        <iframe
+            data-tally-src="https://tally.so/embed/3XVOGe?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy" width="100%" height="313" frameborder="0" marginheight="0" marginwidth="0"
+            title="Get Started" style="border: none; min-height: 313px;"></iframe>
+
+        <!-- Optional privacy line -->
+        <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 1rem;">
+            🔒 <em>We respect your privacy.</em> Your information will never be shared or sold.
+        </p>
+
+        <!-- Tally Script -->
+        <script>
+            var d = document,
+                w = "https://tally.so/widgets/embed.js",
+                v = function () {
+                    "undefined" != typeof Tally
+                        ? Tally.loadEmbeds()
+                        : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) {
+                            e.src = e.dataset.tallySrc;
+                        });
+                };
+            if ("undefined" != typeof Tally) v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+                var s = d.createElement("script");
+                s.src = w;
+                s.onload = v;
+                s.onerror = v;
+                d.body.appendChild(s);
+            }
+        </script>
+    </section>
+
+
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="for-physicians.html" class="button-link">For Physicians</a>
+    </div>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+</body>
+
+</html>

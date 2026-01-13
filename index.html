@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/bc733e0e06.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYTADEL Health</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #fffaf2;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Add this block just below your header CSS */
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.01);
+      /* Adjust opacity here */
+      z-index: 1;
+    }
+
+    /* Ensure content appears above the fade */
+    header * {
+      position: relative;
+      z-index: 2;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      /* You can adjust height to make fade longer */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #f9f9f9 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+
+    nav a {
+      text-decoration: none;
+      color: #f7941d;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: translateY(-3px);
+      color: #e07c00;
+      /* optional: a slightly darker orange on hover */
+    }
+
+    .tagline {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 800px;
+    }
+
+    .tagline ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      animation: fadeInUp 1.2s ease both;
+    }
+
+    .tagline li {
+      margin: 1.5rem 0;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: bulletSlideUp 0.8s ease forwards;
+    }
+
+    .tagline li:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .tagline li:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .tagline li:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .tagline li::before {
+      content: "\2022";
+      color: #ff6600;
+      font-weight: bold;
+      display: inline-block;
+      width: 1.5em;
+      margin-left: -1.5em;
+    }
+
+    @keyframes bulletSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .mission {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .get-started-button {
+      display: inline-block;
+      background-color: #f7941d;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 999px;
+      /* pill shape */
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .get-started-button:hover {
+      background-color: #f7941d;
+      transform: scale(1.05);
+    }
+
+    .get-started-button.inverted {
+      background-color: white;
+      color: #f7941d;
+      border: 2px solid #f7941d;
+      margin-top: 3rem;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .get-started-button.inverted:hover {
+
+      transform: scale(1.05);
+    }
+
+    .bottom-cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .section-white {
+      background-color: #ffffff;
+      padding: 3rem 1rem;
+    }
+
+    .section-light {
+      background-color: #ffffff;
+      background-size: cover;
+      background-repeat: repeat;
+      /* or 'no-repeat' depending on what you want */
+      background-color: transparent;
+      /* override fallback color */
+      padding: 3rem 1rem;
+
+    }
+
+    .nav-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-logo {
+      height: 40px;
+      /* Adjust as needed */
+      width: auto;
+      /* Keeps the aspect ratio */
+      margin-right: 1rem;
+      /* Adds space between icon and tabs */
+      vertical-align: middle;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      font-weight: bold;
+    }
+
+
+
+    .hero-tagline {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #666666;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .hero-divider {
+      width: 60%;
+      height: 3px;
+      background-color: #ff8800;
+      /* Same orange as text */
+      border: none;
+      margin: 1rem auto 2rem auto;
+      /* space above and below */
+      opacity: 0.8;
+    }
+
+    .hero-logo {
+      max-width: 1000px;
+      /* or smaller if you want */
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      padding: 2rem 2rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      max-width: 1100px;
+      margin: 4rem auto;
+      text-align: center;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .feature-column {
+      flex: 0 0 33.3333%;
+      box-sizing: border-box;
+      padding: 2rem;
+      border-right: 1px solid #ddd;
+    }
+
+    .feature-column {
+      flex: 0 0 33.3333%;
+      box-sizing: border-box;
+      padding: 2rem;
+      border-right: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-column:last-child {
+      border-right: none;
+    }
+
+    .feature-column img {
+      height: 40px;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .feature-column h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #f7941d;
+      /* use your brand orange */
+    }
+
+    .feature-column p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    #icon1 {
+      font-size: 48px;
+      color: #f7941d;
+      /* orange */
+      margin-bottom: 1rem;
+    }
+
+    #icon2 {
+      font-size: 48px;
+      color: #f7941d;
+      /* orange */
+      margin-bottom: 1rem;
+    }
+
+    .how-it-works {
+      background: linear-gradient(to bottom, #f9a633, #f7941d);
+      /* your orange */
+      text-align: center;
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      box-shadow:
+        inset 0 8px 8px rgba(255, 255, 255, 0.3),
+        /* top shine */
+        inset 0 -8px 8px rgba(255, 255, 255, 0.2),
+        /* bottom shine */
+        0 4px 10px rgba(0, 0, 0, 0.2);
+      /* outside shadow for lift */
+      margin: 4rem auto;
+      max-width: 1100px;
+    }
+
+
+    .how-it-works h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .how-steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .how-step {
+      flex: 1 1 300px;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .how-step:hover {
+      transform: translateY(-5px);
+    }
+
+    .how-step h3,
+    .how-step p {
+      color: white;
+    }
+
+    .comparison-section {
+      background-color: rgba(249, 249, 249, 0.4);
+      ;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .comparison-section h2 {
+      color: #f7941d;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .comparison-table thead th {
+      background-color: #f7941d;
+      color: white;
+      font-weight: bold;
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .comparison-table tbody td {
+      background-color: white;
+      padding: 1.2rem;
+      border-bottom: 1px solid #eee;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .comparison-table tbody tr:nth-child(even) td {
+      background-color: #fefefe;
+    }
+
+    @media screen and (max-width: 768px) {
+      .comparison-table thead {
+        display: none;
+      }
+
+      .comparison-table tbody td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        border-bottom: none;
+        border-top: 1px solid #eee;
+      }
+
+      .comparison-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #f7941d;
+      }
+    }
+
+    .dpc-explainer {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      text-align: center;
+    }
+
+    .pricing-table tr:first-of-type td {
+      background-color: #fff5eb;
+      font-weight: bold;
+    }
+
+    .pricing-section {
+      background-color: #fcfcfc;
+      padding: 4rem 2rem;
+      border-radius: 24px;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .section-orange {
+      background: linear-gradient(to bottom, #f9a633, #f7941d);
+      /* your orange */
+      text-align: center;
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 20px;
+      box-shadow:
+        inset 0 8px 8px rgba(255, 255, 255, 0.3),
+        /* top shine */
+        inset 0 -8px 8px rgba(255, 255, 255, 0.2),
+        /* bottom shine */
+        0 4px 10px rgba(0, 0, 0, 0.2);
+      /* outside shadow for lift */
+      margin: 4rem auto;
+      max-width: 1100px;
+    }
+
+    .section-orange h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-orange p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .get-started-button.inverted {
+      background-color: white;
+      color: #f7941d;
+      border: 2px solid #f7941d;
+      display: inline-block;
+      transition: transform 0.3s ease;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .get-started-button.inverted:hover {
+      transform: scale(1.05);
+    }
+
+    .section-orange-wrapper {
+      background: linear-gradient(to bottom, #ffffff 0%, #f7941d 20%, #f7941d 80%, #ffffff 100%);
+      padding: 2rem 0;
+    }
+
+    .section-orange {
+      background-color: #f7941d;
+      color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .orange-section {
+      background-color: #ffffff;
+      padding: 4rem 1rem;
+    }
+
+    .orange-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #f7941d;
+      border-radius: 24px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      padding: 3rem 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    .orange-container h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .orange-content p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      background-color: #ffffff;
+      padding: 4rem 1rem;
+    }
+
+    .our-team {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .our-team h2 {
+      font-size: 2.5rem;
+      color: #f7941d;
+      margin-bottom: 2rem;
+    }
+
+
+    .team-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .team-photo {
+      flex: 1 1 40%;
+      max-width: 400px;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-bio-thumbnails {
+      flex: 1 1 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .team-bio {
+      margin-bottom: 1.5rem;
+    }
+
+    .team-bio p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .thumbnail-row img {
+      flex: 1;
+      height: 240px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .background-wrapper {
+      position: fixed;
+      inset: 0;
+      background: url('white-mountain.png') no-repeat center top;
+      background-size: cover;
+      z-index: -1;
+      opacity: 0.1;
+      /* adjust this for more or less fade */
+      pointer-events: none;
+    }
+
+    .text-overlay {
+      background-color: rgba(255, 255, 255, 0.5);
+      /* white with 85% opacity */
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .dpc-explainer {
+      background-color: rgba(255, 255, 255, 0.5);
+      /* white with 85% opacity */
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: rgba(250, 250, 250, 0.9);
+      border-radius: 16px;
+
+      padding: 2.5rem 2rem;
+      max-width: 600px;
+      width: 90%;
+      box-shadow:
+        inset 0 8px 8px rgba(255, 255, 255, 0.4),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.08),
+        0 6px 12px rgba(0, 0, 0, 0.05);
+
+      position: relative;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      color: #f7941d;
+      font-size: 1.8rem;
+    }
+
+    .modal-content p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #f7941d;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .modal-close:hover {
+      color: #e07c00;
+    }
+
+    .white-close {
+      color: white;
+    }
+
+    .white-close:hover {
+      color: #f1f1f1;
+    }
+
+    .modal-logo {
+      height: 60px;
+      width: auto;
+      display: block;
+      margin: 2rem auto 0 auto;
+      opacity: 0.5;
+    }
+
+    .modal-content.modal-orange {
+      background: linear-gradient(to bottom,
+          rgba(249, 166, 51, 0.95),
+          rgba(247, 148, 29, 0.95));
+      ;
+      color: white;
+      opacity: 1;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      max-width: 600px;
+      width: 90%;
+      box-shadow:
+        inset 0 8px 8px rgba(255, 255, 255, 0.3),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.1),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      border: 1px solid #f7941d;
+    }
+
+    .modal-orange p {
+      color: white;
+    }
+
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-wrapper"></div>
+
+  <div class="nav-sticky-wrapper">
+    <nav>
+      <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+      <a href="about-cytadel.html">About CYTADEL</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <header>
+
+    <img src="cytadellogo.svg" alt="CYTADEL Health Logo" class="hero-logo">
+    <h1 class="hero-tagline">A Parallel Healthcare System Built For You</h1>
+    <hr class="hero-divider">
+  </header>
+
+  <section class="tagline">
+
+
+    <section class="features">
+      <h2 style="width: 100%; font-size: 2.2rem; color: #f7941d; margin-bottom: 2rem;">Our Values</h2>
+
+      <div class="feature-column" onclick="openModal(this)" data-title="Peer-to-Peer"
+        data-content="Under the guise of making healthcare more affordable, insurance companies have instead embedded themselves into nearly every aspect of care as unnecessary, profit-seeking middlemen. What should be a direct and human interaction between doctor and patient becomes tangled in bureaucracy, inflated costs, and opaque rules. Rather than aligning with patient outcomes, these systems often reward volume, shortcuts, and defensive medicine, leaving patients disempowered and physicians frustrated.">
+        <i class="fas fa-handshake" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+        <h3>Peer-to-Peer</h3>
+        <p>Removing obstructions to the doctor-patient relationship</p>
+      </div>
+      <div class="feature-column" onclick="openModal(this)" data-title="First Principles"
+        data-content="Most chronic diseases arise from persistent dietary and lifestyle imbalances. While medications often control symptoms, they rarely address the root cause. Identifying the core dysfunction allows for targeted interventions that correct the underlying pathophysiology, empowering you to take meaningful action and make sustainable changes to your health.">
+
+        <i class="fa-solid fa-seedling" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+        <h3>First Principles</h3>
+        <p>Understanding the root cause of disease and how to restore health.</p>
+      </div>
+      <div class="feature-column" onclick="openModal(this)" data-title="First Principles"
+        data-content="You know your body best. Our role is to listen, understand your goals, and help you move toward them, not impose generic benchmarks. Care should be personalized, respectful of your values, and grounded in your definition of health.">
+
+        <i class="fa-solid fa-compass" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+        <h3>Autonomy</h3>
+        <p>Focusing on <strong>your</strong> goals and aligning with <strong>your</strong> values</p>
+      </div>
+    </section>
+  </section>
+
+  <section class="mission">
+    <div class="text-overlay">
+      <p><strong>CYTADEL Health is a direct primary care clinic </strong> based in Austin, Texas with the mission to
+        build a
+        parallel healthcare system that puts
+        patients and physicians at
+        the
+        center. By removing unnecessary middlemen and using transparent pricing, we restore medicine to what it was
+        meant
+        to be: a direct, productive
+        relationship rooted in trust and shared goals.</p>
+      <p>Through an innovative direct payment model drawing inspiration from Singapore’s world-leading healthcare
+        system,
+        CYTADEL
+        aligns incentives to connect patients with physicians who are genuinely invested in helping them achieve their
+        goals. Gone are the
+        hurried office visits where you don’t feel heard. Gone are the rushed medication prescriptions without any
+        discussion of what’s really going on. In their place, a provider who takes time to listen, build a
+        personalized
+        health plan, and walk with you every step of the way. <strong>Whether you focus on managing a chronic
+          condition,
+          optimizing performance, or preventing future illness, we’re here to help. </strong></p>
+      <p>No gatekeepers. No gimmicks. Just you, your doctor, and a plan that works for your life, your values, and
+        your
+        future.</p>
+    </div>
+    <div class="bottom-cta" id="get-started">
+      <a href="contact.html" class="get-started-button">Get Started</a>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>Why CYTADEL is Better</h2>
+    <div class="how-steps">
+      <div class="how-step" onclick="openOrangeModal(this)"
+        data-content="Insurance-based pricing distorts the true cost of care by adding layers of middlemen, inflated charges, and surprise bills. We eliminate these third parties to bring full transparency to what you pay. With a simple monthly membership and upfront visit fees, our model is designed to be accessible, predictable, and built around your needs">
+        <i class="fas fa-user-md" style="font-size: 48px; color: white;"></i>
+        <h3>Transparent Pricing</h3>
+        <p>No middlemen. No guesswork. Just direct care and clear costs.</p>
+      </div>
+      <div class="how-step" onclick="openOrangeModal(this)"
+        data-content="Outcomes, not billing codes, are what matter. We work toward meaningful, patient-defined goals using data, clear metrics, and regular follow-up. Results matter more than volume.">
+        <i class="fas fa-bullseye" style="font-size: 48px; color: white;"></i>
+        <h3>Results-Based</h3>
+        <p>Defined goals. Consistent tracking. Real accountability. Life-changing outcomes.</p>
+      </div>
+      <div class="how-step" onclick="openOrangeModal(this)"
+        data-content="True health is proactive, not reactive. When we strengthen the body’s natural systems and remove what disrupts them, medications often become less necessary. The goal isn’t to manage dysfunction forever, but to restore lasting balance.">
+        <i class="fas fa-shield-alt" style="font-size: 48px; color: white;"></i>
+        <h3>Preventative,<br>Restorative</h3>
+        <p>Real health isn't about more pills. It's about fewer problems.</p>
+      </div>
+      <div class="modal-overlay" id="modal-orange">
+        <div class="modal-content modal-orange">
+          <span class="modal-close white-close" onclick="closeOrangeModal('modal-orange')">&times;</span>
+          <p id="modal-text-orange"></p>
+          <img src="cytadelthumbnailinverted.svg" alt="Cytadel Logo" class="modal-logo">
+        </div>
+      </div>
+    </div>
+    <a href="contact.html" class="get-started-button inverted">Get Started</a>
+  </section>
+  <section class="comparison-section">
+    <h2>How It Works</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>CYTADEL Health</th>
+          <th>Traditional Clinic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Simple monthly membership keeps you connected to your doctor</td>
+          <td>No guaranteed relationship. You're part of a large panel, often 2,000+ patients per physician</td>
+        </tr>
+        <tr>
+          <td>Longer, more meaningful visits to discuss your goals and make a personalized plan</td>
+          <td>Hurried appointments</td>
+        </tr>
+        <tr>
+          <td>Flat, upfront fee for each visit. You always know the cost</td>
+          <td>Copays, deductibles, coinsurance, and surprise bills with no price transparency</td>
+        </tr>
+        <tr>
+          <td>Same- or next-day appointments</td>
+          <td>Wait weeks or months for rushed 10-minute visits</td>
+        </tr>
+        <tr>
+          <td>Wholesale pricing on labs and medication</td>
+          <td>Retail prices + delays at the pharmacy</td>
+        </tr>
+        <tr>
+          <td>Focus on prevention and whole-person health</td>
+          <td>Reactive, one-size-fits-all care</td>
+        </tr>
+        <tr>
+          <td> Pay for the care YOU need</td>
+          <td>Pay for coverage you might never use</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="dpc-explainer">
+      <p>
+
+      </p>
+      Our approach uses free market principles to deliver better care and better outcomes. A simple monthly membership
+      secures your place in the practice and ensures you have a
+      physician who knows your history and goals. When you need care, whether for a comprehensive annual health review,
+      follow-up, or urgent
+      issue, you pay a straightforward flat fee with prices that are always clear. Membership provides same- or
+      next-day appointments, telemedicine, extended visits, preventive care, and chronic disease management, along with
+      direct communication and no call center barriers. For labs, imaging, or specialty referrals, CYTADEL negotiates
+      affordable rates so you have full visibility and control. The result is timely access, predictable costs,
+      and returning the doctor-patient relationship to the center of medicine.
+      </p>
+    </div>
+    <div class="bottom-cta">
+      <a href="contact.html" class="get-started-button">Get Started</a>
+    </div>
+  </section>
+  <section class="features">
+    <h2 style="width: 100%; font-size: 2.2rem; color: #f7941d; margin-bottom: 2rem;">Our Approach</h2>
+
+    <div class="feature-column" onclick="openModal(this)" data-title="Your Goals, Your Health"
+      data-content="Whether your goal is to live longer, feel stronger, or manage a chronic condition more effectively, your care should reflect what actually matters to you. That might mean extending your healthspan through proactive screening and lifestyle interventions, enhancing energy and performance for work or athletics, or reducing medications while gaining better control over a long-term diagnosis.">
+      <i class="fas fa-mountain" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+      <h3>Your Goals, Your Health</h3>
+      <p>Whether it's longevity, performance optimization, or managing disease, care is tailored to what matters most to
+        <strong>you</strong>.
+    </div>
+
+    <div class="feature-column" onclick="openModal(this)" data-title="Understanding Root Cause"
+      data-content="We examine lifestyle, physiology, and test data to identify the underlying causes of disease, not just symptoms. Nutrition, stress, sleep, and movement all factor into your long-term health.">
+      <i class="fas fa-magnifying-glass" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+      <h3>Understanding Root Cause</h3>
+      <p>We look beyond symptoms to restore balance from the ground up.</p>
+    </div>
+
+    <div class="feature-column" onclick="openModal(this)" data-title="First, Do No Harm"
+      data-content="Our primary duty is to minimize disruptions to the body's processes. This means removing harmful inputs, correcting imbalances at their source, and using higher-risk interventions only when truly necessary. By honoring the body’s design, we promote lasting recovery, not just symptom control.">
+      <i class="fas fa-shield-heart" style="color: #f7941d; font-size: 2rem; margin-bottom: 2rem;"></i>
+      <h3>First, Do No Harm</h3>
+      <p>The body is a network of complex interconnected systems and any additive intervention has the potential for
+        harm.</p>
+    </div>
+    <a href="contact.html" class="get-started-button">Get Started</a>
+  </section>
+
+  </section>
+  <section class="our-team">
+    <h2>Our Team</h2>
+    <div class="team-wrapper">
+      <div class="team-photo">
+        <img src="Family Photo LA.jpg" alt="Family Photo LA">
+      </div>
+      <div class="team-bio-thumbnails">
+        <div class="team-bio">
+          <p>Dr. Christopher Lee earned his medical degree from Texas Tech University and completed his family medicine
+            residency at the University of Florida, where he also received an MBA. He is passionate about improving the
+            healthcare system by making care simpler, more transparent, and centered on the doctor–patient relationship.
+            He has a strong interest in functional, sports, and longevity medicine.
+          </p>
+          <p> His interests extend beyond medicine to include Bitcoin and its potential to reshape financial and
+            healthcare systems, as well as the study of Chinese language and history. Outside of work, he enjoys
+            basketball, football, weightlifting, and spending time with his children.</p>
+        </div>
+        <div class="thumbnail-row">
+          <img src="Chris Giant's Causeway.JPEG" alt="Chris at Giants Causeway">
+          <img src="Family Photo Zion.jpg" alt="Family at Zion">
+          <img src="Chris BTC Vegas.jpg" alt="Chris at BTC Vegas">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+    <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+  </footer>
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+
+      <!-- Cytadel logo -->
+
+
+      <!-- Modal text -->
+      <p id="modal-text"></p>
+      <img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="modal-logo">
+    </div>
+  </div>
+  </div>
+
+  <script>
+    function openModal(el) {
+      const content = el.getAttribute('data-content');
+      document.getElementById('modal-text').innerText = content;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    document.getElementById('modal').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
+
+    // ✅ Correct open function for orange modal
+    function openOrangeModal(el) {
+      const content = el.getAttribute('data-content');
+      document.getElementById('modal-text-orange').innerText = content;
+      document.getElementById('modal-orange').style.display = 'flex';
+    }
+
+    function closeOrangeModal() {
+      document.getElementById('modal-orange').style.display = 'none';
+    }
+
+    document.getElementById('modal-orange').addEventListener('click', function (e) {
+      if (e.target === this) closeOrangeModal();
+    });
+  </script>
+
+
+  </div>
+</body>
+
+</html>

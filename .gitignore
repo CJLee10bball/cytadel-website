@@ -1,0 +1,25 @@
+# macOS junk
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Photos (do not belong in Git)
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.JPG
+*.JPEG
+*.PNG
+*.HEIC
+
+# Videos
+*.mp4
+*.mov
+
+# BUT allow intentional website images
+!assets/images/*.jpg
+!assets/images/*.jpeg
+!assets/images/*.png
+!assets/images/*.svg

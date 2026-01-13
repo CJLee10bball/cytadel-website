@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYTADEL Philosophy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f7941d;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            color: #e07c00;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .philosophy-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem 1rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .philosophy-section h1 {
+            color: #f7941d;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            width: 60%;
+            height: 2px;
+            background-color: #f7941d;
+            margin: 2rem auto;
+            border-radius: 1px;
+            opacity: 0.7;
+        }
+
+        .philosophy-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* 85% opaque white */
+            ;
+            position: relative;
+        }
+
+        .philosophy-section h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #f7941d;
+            position: relative;
+        }
+
+        .paragraph-block {
+            position: relative;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .philosophy-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .divider-line {
+            height: 1px;
+            background-color: #f7941d;
+            margin: 2rem auto;
+            width: 100px;
+            opacity: 0.5;
+        }
+
+
+
+        .background-wrapper {
+            position: fixed;
+            inset: 0;
+            background: url('white-mountain.png') no-repeat center top;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.25;
+            /* adjust this for more or less fade */
+            pointer-events: none;
+        }
+
+        .section-orange.philosophy-box {
+            background: linear-gradient(to bottom, #f9a633, #f7941d);
+            color: white;
+            border-radius: 20px;
+            box-shadow:
+                inset 0 8px 8px rgba(255, 255, 255, 0.3),
+                inset 0 -8px 8px rgba(255, 255, 255, 0.2),
+                0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 4rem auto;
+            padding: 2rem 2rem;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .section-orange.philosophy-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .section-orange.philosophy-box ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+
+
+
+        .orange-content.tenets-list {
+            text-align: left;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .orange-content.tenets-list h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .orange-content.tenets-list ol {
+            list-style: decimal;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 2;
+            margin: 0;
+            padding-left: 1rem;
+        }
+
+        .orange-content.tenets-list li {
+            margin-bottom: 1rem;
+        }
+
+        .background-wrapper {
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper"></div>
+    <nav>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="about-cytadel.html">About CYTADEL</a>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://medspacetime.substack.com" target="_blank">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="philosophy-section">
+        <h1>Our Philosophy</h1>
+
+
+        <div class="paragraph-block">
+            <p>At CYTADEL, we believe medicine should serve the patient, not the system. Health belongs to the
+                individual, and the physician’s role is to guide and empower, not to dictate. Our mission is to rebuild
+                healthcare around
+                clarity, autonomy, and genuine human connection.
+            </p>
+            <section class="section-orange philosophy-box">
+                <div class="orange-content tenets-list">
+                    <h2>Core Tenets</h2>
+                    <ol>
+                        <li>Individuals are responsible for their own health.</li>
+                        <li>Interventions should weigh cost and benefit, starting with the least disruptive.</li>
+                        <li>A good physician is a valuable consultant, not a gatekeeper.</li>
+                        <li>Treatment should align with the patient's personal goals.</li>
+                        <li>Direct care between physician and patient lowers cost and improves clarity.</li>
+                        <li>Open markets with transparent pricing and competition foster affordable, high-quality care.
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <div class="paragraph-block"></div>
+            Our approach to health begins with a simple premise: the human body is intelligent, resilient, and capable
+            of
+            healing when supported in the right conditions. Modern medicine excels at saving lives and managing acute
+            illness, but the system often struggles to prevent or manage chronic disease. Because no two people are the
+            same, each
+            with different strengths, vulnerabilities, and life experiences, the path to recovery and resilience must be
+            personal. True health depends on helping the body maintain its natural equilibrium and restoring that
+            balance
+            when it’s disrupted. When internal systems are steady and strong, you’re less likely to become ill and more
+            likely to recover quickly when you do.</p>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="paragraph-block">
+            <p>The foundation of lasting health rests on four core pillars: nutrition, movement, sleep, and mental
+                well-being. Strengthening these areas, even within the demands of daily life, builds resilience. When
+                something goes wrong, rather than focus narrowly on isolated symptoms, we take a broad view of how organ
+                systems interact with each other and with the environment. We start by listening and examining what
+                you’re experiencing, alongside insights from lab results, wearable data, and other diagnostics. By
+                interpreting this information through the lens of lifestyle and physiology, we work to uncover the
+                deeper roots of illness.</p>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="paragraph-block">
+            <p>Our approach to treatment is grounded in the Hippocratic tradition of doing no harm, guided by the
+                principle
+                of <a href="https://www.medspacetime.com/p/medicina-via-negativa" target="_blank"
+                    style="color:#f7941d; text-decoration: underline;"><em>medicina via
+                        negativa</em></a>, or removing what harms before adding new interventions. Medications and
+                treatments have their place, but they should be used deliberately and with great care. Too often, they
+                mask symptoms without
+                addressing the underlying cause. We begin by eliminating factors that undermine the core pillars of
+                health, then
+                focus on strengthening those foundations through positive lifestyle changes. Only when necessary do we
+                move toward more intensive interventions. The physician’s role is to guide and teach; the patient’s role
+                is to participate actively in their own healing.</p>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="paragraph-block">
+            <p>CYTADEL’s model is built around these principles. From membership design to clinical decision-making,
+                every element supports prevention, clarity, and patient involvement. We begin with lifestyle and
+                personal connection, integrate technology that enhances care, and use medications judiciously. Our goal
+                is simple: to help people build enduring health, strength, and independence.</p>
+            <div class="divider-line"></div>
+        </div>
+
+
+        <div class="paragraph-block">
+            <p>We’ve also reimagined the business of care itself. By removing third-party billing systems and focusing
+                on direct relationships, we reduce administrative overhead and unnecessary complexity. This allows for
+                longer visits, transparent pricing, and thoughtful, individualized care. Access to wholesale labs and
+                medications ensures affordability without compromise. The result is a model that strengthens the
+                doctor-patient relationship and makes preventive, restorative care available to more people.</p>
+            <div class="divider-line"></div>
+        </div>
+
+        <div class="paragraph-block">
+            <p>At CYTADEL, we’re not just rethinking healthcare, we’re rebuilding it from the ground up. Rooted in
+                trust, guided by timeless principles, and designed for real life, our system delivers the clarity,
+                compassion, and quality of care people deserve.</p>
+        </div>
+
+    </section>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
+        <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
+    </footer>
+
+</body>
+
+
+</html>
