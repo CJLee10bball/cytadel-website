@@ -131,6 +131,60 @@
             transform: translateY(-3px);
             background-color: #e07c00;
         }
+        @media (max-width: 768px) {
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .feature-column {
+    flex: 1 1 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .feature-column:last-child {
+    border-bottom: none;
+  }
+
+  .team-wrapper {
+    flex-direction: column;
+  }
+
+  .team-photo,
+  .team-bio-thumbnails {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .thumbnail-row {
+    flex-direction: column;
+  }
+
+  .thumbnail-row img {
+    height: auto;
+  }
+
+  .hero-logo {
+    max-width: 90%;
+  }
+
+  .hero-tagline {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  .comparison-table {
+    font-size: 0.9rem;
+  }
+
+}
     </style>
 </head>
 
