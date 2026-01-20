@@ -76,15 +76,7 @@
             outline: none;
         }
 
-        details[open] summary::after {
-            content: "▲";
-            float: right;
-        }
 
-        summary::after {
-            content: "▼";
-            float: right;
-        }
 
         details p {
             margin-top: 1rem;
@@ -102,67 +94,42 @@
             /* adjust this for more or less fade */
             pointer-events: none;
         }
-        @media (max-width: 768px) {
 
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+        /* Remove default browser arrow */
+        summary {
+            list-style: none;
+        }
 
-  .features {
-    flex-direction: column;
-    padding: 1rem;
-  }
+        summary::-webkit-details-marker {
+            display: none;
+        }
 
-  .feature-column {
-    flex: 1 1 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+        /* Left arrow styling */
+        summary {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
 
-  .feature-column:last-child {
-    border-bottom: none;
-  }
+        /* Arrow icon on the LEFT */
+        summary::before {
+            content: "▶";
+            font-size: 1rem;
+            color: #f7941d;
+            transition: transform 0.2s ease;
+        }
 
-  .team-wrapper {
-    flex-direction: column;
-  }
-
-  .team-photo,
-  .team-bio-thumbnails {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .thumbnail-row {
-    flex-direction: column;
-  }
-
-  .thumbnail-row img {
-    height: auto;
-  }
-
-  .hero-logo {
-    max-width: 90%;
-  }
-
-  .hero-tagline {
-    font-size: 1.6rem;
-    padding: 0 1rem;
-  }
-
-  .comparison-table {
-    font-size: 0.9rem;
-  }
-
-}
+        /* Rotate arrow when open */
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 
 <body>
     <div class="background-wrapper"></div>
     <nav>
-        <a href="index.html"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
         <a href="about-cytadel.html">About CYTADEL</a>
         <a href="philosophy.html">Philosophy</a>
         <a href="pricing.html">Pricing</a>
@@ -239,7 +206,7 @@
                 Traditional Direct Primary Care (DPC) practices usually include unlimited visits in a higher monthly
                 fee. At CYTADEL, we keep your membership cost low to maintain ongoing access to your physician and our
                 system, while visit fees are charged only when you’re seen.
-                For most people, this structure is much more cost-effective. You’d typically need to see your DPC doctor
+                For most people, this structure is much for cost-effective. You’d typically need to see your DPC doctor
                 seven or more times in a year for a traditional flat-fee model to be more cost-effective than CYTADEL’s
                 pay-for-what-you-use approach. </p>
         </details>
