@@ -183,78 +183,52 @@
         .background-wrapper {
             pointer-events: none;
         }
-        @media (max-width: 768px) {
 
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+        .get-started-button.inverted {
+            background-color: white;
+            color: #f7941d;
+            border: 2px solid #f7941d;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            padding: 0.8rem 2rem;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
 
-  .features {
-    flex-direction: column;
-    padding: 1rem;
-  }
+        .get-started-button {
+            display: inline-block;
+            background-color: #f7941d;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 999px;
+            /* pill shape */
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-  .feature-column {
-    flex: 1 1 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+        .get-started-button:hover {
+            background-color: #e07c00;
+            transform: scale(1.05);
+        }
 
-  .feature-column:last-child {
-    border-bottom: none;
-  }
-
-  .team-wrapper {
-    flex-direction: column;
-  }
-
-  .team-photo,
-  .team-bio-thumbnails {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .thumbnail-row {
-    flex-direction: column;
-  }
-
-  .thumbnail-row img {
-    height: auto;
-  }
-
-  .hero-logo {
-    max-width: 90%;
-  }
-
-  .hero-tagline {
-    font-size: 1.6rem;
-    padding: 0 1rem;
-  }
-
-  .comparison-table {
-    font-size: 0.9rem;
-  }
-
-}
-        @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  nav a {
-    font-size: 0.95rem;
-  }
-}
+        .get-started-button.inverted:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
     <div class="background-wrapper"></div>
     <nav>
-        <a href="index.html"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+        <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
         <a href="about-cytadel.html">About CYTADEL</a>
         <a href="philosophy.html">Philosophy</a>
         <a href="pricing.html">Pricing</a>
@@ -284,7 +258,11 @@
                         <li>Direct care between physician and patient lowers cost and improves clarity.</li>
                         <li>Open markets with transparent pricing and competition foster affordable, high-quality care.
                         </li>
+
                     </ol>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="contact.html" class="get-started-button inverted">Get Started</a>
+                    </div>
                 </div>
             </section>
 
@@ -315,17 +293,13 @@
 
         <div class="paragraph-block">
             <p>Our approach to treatment is grounded in the Hippocratic tradition of doing no harm, guided by the
-                principle
-                of <a href="https://www.medspacetime.com/p/medicina-via-negativa" target="_blank"
-                    style="color:#f7941d; text-decoration: underline;"><em>medicina via
-                        negativa</em></a>, or removing what harms before adding new interventions. Medications and
-                treatments have their place, but they should be used deliberately and with great care. Too often, they
-                mask symptoms without
-                addressing the underlying cause. We begin by eliminating factors that undermine the core pillars of
-                health, then
-                focus on strengthening those foundations through positive lifestyle changes. Only when necessary do we
-                move toward more intensive interventions. The physician’s role is to guide and teach; the patient’s role
-                is to participate actively in their own healing.</p>
+                principle of <a href="https://www.medspacetime.com/p/medicina-via-negativa" target="_blank"
+                    style="color:#f7941d; text-decoration: underline;"><em> medicina via negativa:</em></a> that health
+                is often restored by first removing what harms, then thoughtfully adding what helps. Medical decisions
+                are rarely black and white. Every intervention carries potential benefits, risks, and tradeoffs, and
+                those tradeoffs matter differently to different people depending on their goals, and tolerance for risk.
+                Medications and procedures play an essential role in care, but they should be chosen deliberately
+                through open discussion rather than applied reflexively or by protocol alone.</p>
             <div class="divider-line"></div>
         </div>
 
@@ -352,7 +326,9 @@
                 trust, guided by timeless principles, and designed for real life, our system delivers the clarity,
                 compassion, and quality of care people deserve.</p>
         </div>
-
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="contact.html" class="get-started-button">Get Started</a>
+        </div>
     </section>
     <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0;">
         <img src="cytadelthumbnail.svg" alt="Cytadel Turrets" style="height: 80px; width: auto; opacity: 0.6;">
