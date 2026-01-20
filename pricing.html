@@ -85,6 +85,48 @@
             .pricing-table td:last-child {
                 text-align: right;
             }
+
+            @media (max-width: 768px) {
+
+                /* Hide table on mobile */
+                .pricing-table {
+                    display: none;
+                }
+
+                /* Show cards on mobile */
+                .pricing-cards {
+                    display: grid;
+                    gap: 1.5rem;
+                    max-width: 700px;
+                    margin: 0 auto;
+                }
+
+                .pricing-card {
+                    background: white;
+                    border-radius: 16px;
+                    padding: 1.5rem;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                    text-align: left;
+                }
+
+                .pricing-card h3 {
+                    color: #f7941d;
+                    margin-bottom: 0.5rem;
+                    font-size: 1.2rem;
+                }
+
+                .pricing-card .description {
+                    font-size: 0.95rem;
+                    color: #666;
+                    margin-bottom: 0.75rem;
+                }
+
+                .pricing-card .price {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    color: #333;
+                }
+            }
         }
 
         .get-started-button {
@@ -155,60 +197,6 @@
             /* adjust this for more or less fade */
             pointer-events: none;
         }
-        @media (max-width: 768px) {
-
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .features {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .feature-column {
-    flex: 1 1 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .feature-column:last-child {
-    border-bottom: none;
-  }
-
-  .team-wrapper {
-    flex-direction: column;
-  }
-
-  .team-photo,
-  .team-bio-thumbnails {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  .thumbnail-row {
-    flex-direction: column;
-  }
-
-  .thumbnail-row img {
-    height: auto;
-  }
-
-  .hero-logo {
-    max-width: 90%;
-  }
-
-  .hero-tagline {
-    font-size: 1.6rem;
-    padding: 0 1rem;
-  }
-
-  .comparison-table {
-    font-size: 0.9rem;
-  }
-
-}
     </style>
 </head>
 
@@ -216,7 +204,7 @@
     <div class="background-wrapper"></div>
     <div class="nav-sticky-wrapper">
         <nav>
-            <a href="index.html"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
+            <a href="/"><img src="cytadelthumbnail.svg" alt="Cytadel Logo" class="nav-logo"></a>
             <a href="about-cytadel.html">About CYTADEL</a>
             <a href="philosophy.html">Philosophy</a>
             <a href="pricing.html">Pricing</a>
@@ -265,14 +253,50 @@
                 <td>$40</td>
             </tr>
             <tr>
-                <td>Non-member one-time 60 minute consultation</td>
+                <td>One-time 60 minute consultation (non-member)</td>
                 <td>$350</td>
             </tr>
             <tr>
-                <td>Travel Fee (in-home or workplace visits)</td>
+                <td>Travel Fee (if seen at home or office)</td>
                 <td>$75</td>
             </tr>
         </table>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Monthly Membership</h3>
+                <p class="price">$50/month (adult)<br>$25/month (under 18)</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Annual Health Optimization Review</h3>
+                <p class="description">1 hour, recommended once yearly</p>
+                <p class="price">$150</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Follow-Up Visits</h3>
+                <p class="description">30 or 60 minutes, as needed</p>
+                <p class="price">$75 / $150</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Urgent Visit</h3>
+                <p class="description">Max 15 minutes, 1 acute issue</p>
+                <p class="price">$40</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>One-Time Consultation</h3>
+                <p class="description">60 minutes (non-member)</p>
+                <p class="price">$350</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Travel Fee</h3>
+                <p class="description">If seen at home or office</p>
+                <p class="price">$75</p>
+            </div>
+        </div>
         <p style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
             *10% off when paid in <span style="color: #f7941d; font-weight: 600;">BTC.</span>
             Most in-office procedures are included in your visit fee.
