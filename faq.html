@@ -123,6 +123,37 @@
         details[open] summary::before {
             transform: rotate(90deg);
         }
+        /* === HARD RESET native disclosure markers (ALL browsers) === */
+details summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::marker {
+  display: none;
+}
+
+/* === Our custom LEFT arrow === */
+details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+details summary::before {
+  content: "▸";
+  color: #f7941d;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::before {
+  transform: rotate(90deg);
+}
     </style>
 </head>
 
