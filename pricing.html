@@ -61,73 +61,7 @@
             color: #333;
         }
 
-        @media (max-width: 600px) {
 
-            .pricing-table,
-            .pricing-table tr,
-            .pricing-table td,
-            .pricing-table th {
-                display: block;
-                width: 100%;
-            }
-
-            .pricing-table tr {
-                margin-bottom: 1rem;
-                border-radius: 12px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            }
-
-            .pricing-table td {
-                text-align: left;
-                border-bottom: none;
-            }
-
-            .pricing-table td:last-child {
-                text-align: right;
-            }
-
-            @media (max-width: 768px) {
-
-                /* Hide table on mobile */
-                .pricing-table {
-                    display: none;
-                }
-
-                /* Show cards on mobile */
-                .pricing-cards {
-                    display: grid;
-                    gap: 1.5rem;
-                    max-width: 700px;
-                    margin: 0 auto;
-                }
-
-                .pricing-card {
-                    background: white;
-                    border-radius: 16px;
-                    padding: 1.5rem;
-                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-                    text-align: left;
-                }
-
-                .pricing-card h3 {
-                    color: #f7941d;
-                    margin-bottom: 0.5rem;
-                    font-size: 1.2rem;
-                }
-
-                .pricing-card .description {
-                    font-size: 0.95rem;
-                    color: #666;
-                    margin-bottom: 0.75rem;
-                }
-
-                .pricing-card .price {
-                    font-size: 1.3rem;
-                    font-weight: 700;
-                    color: #333;
-                }
-            }
-        }
 
         .get-started-button {
             display: inline-block;
@@ -196,6 +130,61 @@
             opacity: 0.25;
             /* adjust this for more or less fade */
             pointer-events: none;
+        }
+
+        /* MOBILE: hide table, show cards */
+        @media (max-width: 768px) {
+
+            /* Hide desktop table */
+            .pricing-table {
+                display: none;
+            }
+
+            /* Show mobile cards */
+            .pricing-cards {
+                display: grid;
+                gap: 1.5rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .pricing-card {
+                background: white;
+                border-radius: 16px;
+                padding: 1.5rem;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+                text-align: left;
+            }
+
+            .pricing-card h3 {
+                color: #f7941d;
+                margin-bottom: 0.5rem;
+                font-size: 1.2rem;
+            }
+
+            .pricing-card .description {
+                font-size: 0.95rem;
+                color: #666;
+                margin-bottom: 0.75rem;
+            }
+
+            .pricing-card .price {
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #333;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            nav a {
+                white-space: nowrap;
+            }
         }
     </style>
 </head>
