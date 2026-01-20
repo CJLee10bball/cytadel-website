@@ -757,80 +757,207 @@
         transform: translateY(0);
       }
     }
+
     @media (max-width: 768px) {
 
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
 
-  .features {
-    flex-direction: column;
-    padding: 1rem;
-  }
+      .features {
+        flex-direction: column;
+        padding: 1rem;
+      }
 
-  .feature-column {
-    flex: 1 1 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+      .feature-column {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
 
-  .feature-column:last-child {
-    border-bottom: none;
-  }
+      .feature-column:last-child {
+        border-bottom: none;
+      }
 
-  .team-wrapper {
-    flex-direction: column;
-  }
+      .team-wrapper {
+        flex-direction: column;
+      }
 
-  .team-photo,
-  .team-bio-thumbnails {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
+      .team-photo,
+      .team-bio-thumbnails {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
 
-  .thumbnail-row {
-    flex-direction: column;
-  }
+      .thumbnail-row {
+        flex-direction: column;
+      }
 
-  .thumbnail-row img {
-    height: auto;
-  }
+      .thumbnail-row img {
+        height: auto;
+      }
 
-  .hero-logo {
-    max-width: 90%;
-  }
+      .hero-logo {
+        max-width: 90%;
+      }
 
-  .hero-tagline {
-    font-size: 1.6rem;
-    padding: 0 1rem;
-  }
+      .hero-tagline {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+      }
 
-  .comparison-table {
-    font-size: 0.9rem;
-  }
+      .comparison-table {
+        font-size: 0.9rem;
+      }
 
-  /* Mobile comparison table fix */
-  .comparison-table tbody tr {
-    display: block;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 1rem;
-  }
+      /* Mobile comparison table fix */
+      .comparison-table tbody tr {
+        display: block;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 1rem;
+      }
 
-  .comparison-table tbody td {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 0;
-    border: none;
-  }
+      .comparison-table tbody td {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+        border: none;
+      }
 
-  .comparison-table tbody td::before {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: #f7941d;
-  }
+      .comparison-table tbody td::before {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: #f7941d;
+      }
+    }
+
+    /* Mobile comparison cards */
+    .comparison-cards {
+      display: none;
+    }
+
+    .comparison-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      text-align: left;
+    }
+
+    .comparison-card h3 {
+      color: #f7941d;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .comparison-card h4 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #999;
+    }
+
+    .comparison-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-table {
+        display: none;
+      }
+
+      .comparison-cards {
+        display: block;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+
+    /* MOBILE COMPARISON CARDS */
+    .comparison-cards {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-table {
+        display: none;
+      }
+
+      .comparison-cards {
+        display: block;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .comparison-group {
+        background: white;
+        border-radius: 18px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .comparison-group-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.4rem;
+        color: #f7941d;
+        margin-bottom: 1.25rem;
+        font-weight: 700;
+      }
+
+      .check-icon {
+        background: #f7941d;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      .comparison-item {
+        border-radius: 14px;
+        padding: 1rem 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .comparison-item h4 {
+        margin: 0 0 0.25rem 0;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .comparison-item p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .comparison-item.cytadel {
+        background: rgba(247, 148, 29, 0.08);
+        border-left: 6px solid #f7941d;
+      }
+
+      .comparison-item.cytadel h4 {
+        color: #f7941d;
+      }
+
+      .comparison-item.traditional {
+        background: #f6f6f6;
+        border-left: 6px solid #ccc;
+      }
+
+      .comparison-item.traditional h4 {
+        color: #999;
+      }
     }
   </style>
 </head>
@@ -959,48 +1086,164 @@
       <tbody>
         <tr>
           <td data-label="CYTADEL Health">
-          Simple monthly membership keeps you connected to your doctor</td>
+            Simple monthly membership keeps you connected to your doctor</td>
           <td data-label="Traditional Clinic">
-          No guaranteed relationship. You're part of a large panel, often 2,000+ patients per physician</td>
+            No guaranteed relationship. You're part of a large panel, often 2,000+ patients per physician</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Longer, more meaningful visits to discuss your goals and make a personalized plan</td>
+            Longer, more meaningful visits to discuss your goals and make a personalized plan</td>
           <td data-label="Traditional Clinic">
-          Hurried appointments</td>
+            Hurried appointments</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Flat, upfront fee for each visit. You always know the cost</td>
+            Flat, upfront fee for each visit. You always know the cost</td>
           <td data-label="Traditional Clinic">
-          Copays, deductibles, coinsurance, and surprise bills with no price transparency</td>
+            Copays, deductibles, coinsurance, and surprise bills with no price transparency</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Same- or next-day appointments</td>
+            Same- or next-day appointments</td>
           <td data-label="Traditional Clinic">
-          Wait weeks or months for rushed 10-minute visits</td>
+            Wait weeks or months for rushed 10-minute visits</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Wholesale pricing on labs and medication</td>
+            Wholesale pricing on labs and medication</td>
           <td data-label="Traditional Clinic">
-          Retail prices + delays at the pharmacy</td>
+            Retail prices + delays at the pharmacy</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Focus on prevention and whole-person health</td>
+            Focus on prevention and whole-person health</td>
           <td data-label="Traditional Clinic">
-          Reactive, one-size-fits-all care</td>
+            Reactive, one-size-fits-all care</td>
         </tr>
         <tr>
           <td data-label="CYTADEL Health">
-          Pay for the care YOU need</td>
+            Pay for the care YOU need</td>
           <td data-label="Traditional Clinic">
-          Pay for coverage you might never use</td>
+            Pay for coverage you might never use</td>
         </tr>
       </tbody>
     </table>
+    <!-- Mobile comparison cards -->
+    <div class="comparison-cards">
+
+      <div class="comparison-group">
+        <h3 class="comparison-group-title">
+          <span class="check-icon">✓</span> Appointments
+        </h3>
+
+        <div class="comparison-item cytadel">
+          <h4>CYTADEL Health</h4>
+          <p>Same- or next-day appointments</p>
+        </div>
+
+        <div class="comparison-item traditional">
+          <h4>Traditional Clinic</h4>
+          <p>Wait weeks or months for rushed visits</p>
+        </div>
+      </div>
+
+      <div class="comparison-group">
+        <h3 class="comparison-group-title">
+          <span class="check-icon">✓</span> Visit Structure
+        </h3>
+
+        <div class="comparison-item cytadel">
+          <h4>CYTADEL Health</h4>
+          <p>Longer, meaningful visits with a plan</p>
+        </div>
+
+        <div class="comparison-item traditional">
+          <h4>Traditional Clinic</h4>
+          <p>Hurried appointments</p>
+        </div>
+      </div>
+
+      <div class="comparison-group">
+        <h3 class="comparison-group-title">
+          <span class="check-icon">✓</span> Pricing & Transparency
+        </h3>
+
+        <div class="comparison-item cytadel">
+          <h4>CYTADEL Health</h4>
+          <p>Flat, upfront fee for each visit. You always know the cost</p>
+        </div>
+
+        <div class="comparison-item traditional">
+          <h4>Traditional Clinic</h4>
+          <p>Copays, deductibles, and surprise bills</p>
+        </div>
+        <div class="comparison-group">
+          <h3 class="comparison-group-title">
+            <span class="check-icon">✓</span> Access & Availability
+          </h3>
+
+          <div class="comparison-item cytadel">
+            <h4>CYTADEL Health</h4>
+            <p>Same- or next-day appointments</p>
+          </div>
+
+          <div class="comparison-item traditional">
+            <h4>Traditional Clinic</h4>
+            <p>Wait weeks or months for rushed 10-minute visits</p>
+          </div>
+        </div>
+
+        <div class="comparison-group">
+          <h3 class="comparison-group-title">
+            <span class="check-icon">✓</span> Medications & Labs
+          </h3>
+
+          <div class="comparison-item cytadel">
+            <h4>CYTADEL Health</h4>
+            <p>Wholesale pricing on labs and medication</p>
+          </div>
+
+          <div class="comparison-item traditional">
+            <h4>Traditional Clinic</h4>
+            <p>Retail prices and pharmacy delays</p>
+          </div>
+        </div>
+
+        <div class="comparison-group">
+          <h3 class="comparison-group-title">
+            <span class="check-icon">✓</span> Philosophy of Care
+          </h3>
+
+          <div class="comparison-item cytadel">
+            <h4>CYTADEL Health</h4>
+            <p>Focus on prevention and whole-person health</p>
+          </div>
+
+          <div class="comparison-item traditional">
+            <h4>Traditional Clinic</h4>
+            <p>Reactive, one-size-fits-all care</p>
+          </div>
+        </div>
+
+        <div class="comparison-group">
+          <h3 class="comparison-group-title">
+            <span class="check-icon">✓</span> Payment Model
+          </h3>
+
+          <div class="comparison-item cytadel">
+            <h4>CYTADEL Health</h4>
+            <p>Pay only for the care YOU need</p>
+          </div>
+
+          <div class="comparison-item traditional">
+            <h4>Traditional Clinic</h4>
+            <p>Pay for coverage you may never use</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
     <div class="dpc-explainer">
       <p>
 
