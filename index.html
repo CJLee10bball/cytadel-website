@@ -1943,7 +1943,7 @@
     <section class="team-section" id="team">
         <div class="team-header">
             <div class="section-label">Meet the Physician</div>
-            <h2 class="section-title">HERE <span style="color:var(--orange);">TO SUPPORT YOU</span></h2>
+            <h2 class="section-title">THE TEAM <span style="color:var(--orange);">BEHIND YOUR CARE</span></h2>
         </div>
         <div class="team-card">
             <div class="team-photo">
@@ -2092,6 +2092,11 @@
                         <textarea id="message" name="message" rows="4"
                             placeholder="Brief background, health concerns, or questions..."></textarea>
                     </div>
+                    <div id="form-error-msg"
+                        style="display:none;color:#e05252;font-size:0.85rem;margin-bottom:12px;padding:12px 16px;border:1px solid rgba(224,82,82,0.3);background:rgba(224,82,82,0.08);">
+                        Something went wrong. Please try again or email us at <a href="mailto:hello@cytadelhealth.com"
+                            style="color:#e05252;">hello@cytadelhealth.com</a>.
+                    </div>
                     <button type="submit" class="btn-primary"
                         style="width:100%;display:block;text-align:center;">Submit</button>
                 </form>
@@ -2199,7 +2204,7 @@
                 var btn = form.querySelector('button[type="submit"]');
                 btn.textContent = 'Sending...';
                 btn.disabled = true;
-                fetch(form.dataset.action, {
+                fetch(form.action, {
                     method: 'POST',
                     body: new FormData(form),
                     headers: { 'Accept': 'application/json' }
