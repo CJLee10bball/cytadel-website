@@ -1098,11 +1098,33 @@
             }
 
             .steps {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                border-right: none;
+                border-bottom: 1px solid var(--slate-border);
+            }
+
+            .step:last-child {
+                border-bottom: none;
             }
 
             .step::after {
                 display: none;
+            }
+
+            .step-header {
+                gap: 8px;
+            }
+
+            .step-number {
+                font-size: 3rem;
+            }
+
+            .step-icon {
+                width: 52px;
+                height: 52px;
             }
 
             .pricing-wrapper {
@@ -1368,6 +1390,184 @@
         .custom-option.selected {
             color: var(--orange);
         }
+
+        /* ── MEET DR. LEE ── */
+        .team-section {
+            background: var(--slate-mid);
+            border-top: 1px solid var(--slate-border);
+            border-bottom: 1px solid var(--slate-border);
+            padding: 100px 60px;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .team-header .section-label {
+            justify-content: center;
+        }
+
+        .team-card {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            border: 1px solid var(--slate-border);
+            background: var(--slate);
+            overflow: hidden;
+        }
+
+        .team-photo {
+            position: relative;
+            overflow: hidden;
+            background: var(--slate-light);
+            min-height: 520px;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.4s, transform 0.4s;
+        }
+
+        .team-card:hover .team-photo img {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        .team-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: rgba(255, 255, 255, 0.15);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .team-photo-placeholder svg {
+            width: 64px;
+            height: 64px;
+            opacity: 0.2;
+        }
+
+        .team-info {
+            padding: 52px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .team-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, transparent, var(--orange), transparent);
+            opacity: 0.6;
+        }
+
+        .team-role {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .team-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.2rem;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .team-credentials {
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.85rem;
+            color: var(--orange);
+            letter-spacing: 0.08em;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .team-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--orange);
+            margin-bottom: 24px;
+            opacity: 0.5;
+        }
+
+        .team-bio {
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .team-bio:last-of-type {
+            margin-bottom: 28px;
+        }
+
+        .team-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .team-tag {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--orange);
+            border: 1px solid rgba(232, 98, 10, 0.3);
+            padding: 5px 12px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1000px) {
+            .team-section {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .team-card {
+                grid-template-columns: 1fr;
+            }
+
+            .team-photo {
+                min-height: 300px;
+            }
+
+            .team-photo-placeholder {
+                min-height: 300px;
+            }
+
+            .team-info {
+                padding: 36px 28px;
+            }
+        }
     </style>
 </head>
 
@@ -1406,7 +1606,7 @@
                 foundations of health.
             </p>
             <div class="hero-buttons fade-up fade-up-d3">
-                <a href="#join" class="btn-primary">Request a Consultation</a>
+                <a href="#join" class="btn-primary">Join the Waitlist</a>
                 <a href="#pricing" class="btn-secondary">View Pricing</a>
             </div>
         </div>
@@ -1579,11 +1779,8 @@
             <div class="pricing-intro">
                 <div class="section-label">Transparent Pricing</div>
                 <h2 class="section-title">NO SURPRISES. EVER.</h2>
-                <p>Rather than charging a high flat monthly fee regardless of use, CYTADEL is designed to align cost
-                    with care. A simple membership keeps you connected to your physician, while transparent visit
-                    pricing ensures you only pay for what you need. Labs, medications, and imaging are negotiated at
-                    cash-pay and wholesale rates whenever possible, giving you full visibility and control over your
-                    healthcare costs.</p>
+                <p>No insurance, no hidden fees, no surprise bills. You know exactly what you pay before you walk in the
+                    door. That's what medicine should look like.</p>
 
             </div>
             <div class="pricing-cards">
@@ -1604,7 +1801,9 @@
                 </div>
                 <div class="price-card">
                     <div class="price-type">Follow-Up Visit</div>
-                    <div class="price-amount"><sup>$</sup>75 / 150</div>
+                    <div class="price-amount"><sup>$</sup>75 <span
+                            style="font-size:1.4rem;color:var(--text-dim);font-family:'Barlow',sans-serif;font-weight:300;">
+                            / $150</span></div>
                     <div class="price-duration">30 or 60 minutes · as needed</div>
                     <div class="price-desc">Focused follow-ups, medication reviews, acute concerns, and check-ins on
                         your care plan.</div>
@@ -1740,14 +1939,60 @@
         </div>
     </section>
 
-    <!-- PHILOSOPHY QUOTE -->
-    <section class="philosophy">
-        <div class="philosophy-inner">
-            <blockquote>
-                "The doctor of the future will give no medicine, but will interest his patients in the care of the human
-                frame, in diet, and in the cause and prevention of disease."
-            </blockquote>
-            <div class="philosophy-attr">Thomas Edison · CYTADEL's Guiding Principle</div>
+    <!-- MEET DR. LEE -->
+    <section class="team-section" id="team">
+        <div class="team-header">
+            <div class="section-label">Meet the Physician</div>
+            <h2 class="section-title">CARE <span style="color:var(--orange);">BUILT AROUND YOU</span></h2>
+        </div>
+        <div class="team-card">
+            <div class="team-photo">
+                <div class="team-photo-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span>Photo Coming Soon</span>
+                </div>
+            </div>
+            <div class="team-info">
+                <div class="team-role">Founder &amp; Physician</div>
+                <div class="team-name">Dr. Lee</div>
+                <div class="team-credentials">MD &nbsp;·&nbsp; Board Certified &nbsp;·&nbsp; Austin, TX</div>
+                <div class="team-divider"></div>
+                <p class="team-bio">
+                    Dr. Lee earned his MD from Texas Tech University Health Sciences Center and completed his Family
+                    Medicine
+                    residency at the University of Florida, where he also earned an MBA. During his training he
+                    developed a strong
+                    interest in sports medicine, which evolved into a broader focus on optimizing performance and
+                    long-term health.
+                </p>
+                <p class="team-bio">
+                    He approaches medicine from first principles, using advanced diagnostics, detailed clinical history,
+                    and clear
+                    conversations about goals to build individualized plans for each patient.
+                </p>
+                <p class="team-bio">
+                    Dr. Lee has also studied firsthand how different cultures approach diet, movement, and longevity.
+                    These
+                    perspectives shape a practice philosophy that combines rigorous evidence-based medicine with a
+                    broader
+                    understanding of how people live and perform.
+                </p>
+                <p class="team-bio">
+                    Outside the clinic, he enjoys basketball and strength training and brings the same performance
+                    mindset to
+                    helping patients pursue stronger and healthier lives.
+                </p>
+                <div class="team-tags">
+                    <span class="team-tag">Direct Primary Care</span>
+                    <span class="team-tag">Longevity Medicine</span>
+                    <span class="team-tag">Performance Optimization</span>
+                    <span class="team-tag">Metabolic Health</span>
+                    <span class="team-tag">First Principles Medicine</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1774,8 +2019,9 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
-                        <a href="mailto:hello@cytadelhealth.com"
-                            style="color:var(--text-dim);text-decoration:none;">hello@cytadelhealth.com</a>
+                        <a href="/cdn-cgi/l/email-protection#f9919c959596b99a808d989d9c95919c98958d91d79a9694"
+                            style="color:var(--text-dim);text-decoration:none;"><span class="__cf_email__"
+                                data-cfemail="1b737e7777745b78626f7a7f7e77737e7a776f7335787476">[email&#160;protected]</span></a>
                     </div>
                     <div class="contact-detail">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -1874,7 +2120,9 @@
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li>hello@cytadelhealth.com</li>
+                    <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                            data-cfemail="dfb7bab3b3b09fbca6abbebbbab3b7babeb3abb7f1bcb0b2">[email&#160;protected]</a>
+                    </li>
                     <li><a href="tel:+15125550100">(512) 555-0100</a></li>
                     <li><a href="#">Austin, Texas</a></li>
                     <li><a href="#">Patient Portal</a></li>
@@ -1888,6 +2136,7 @@
         </div>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Smooth scroll
@@ -1956,11 +2205,4 @@
                     headers: { 'Accept': 'application/json' }
                 });
                 if (response.ok) {
-                    form.style.display = 'none';
-                    document.getElementById('form-success').style.display = 'block';
-                } else {
-                    btn.textContent = 'Request Consultation';
-                    btn.disabled = false;
-                    alert('Something went wrong. Please try again or email us directly.');
-                }
-            } catch (err) {
+                    form.s
